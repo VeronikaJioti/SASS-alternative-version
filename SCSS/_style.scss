@@ -1,0 +1,35 @@
+.section-bg {
+background-color: aliceblue;
+    .wraper {
+        @include d-flex(flex,space-between,center);
+        .left-block {
+            width: $size01;
+            height: $size02;
+            background-color: $color01;
+            @include d-flex(flex,space-around,center);
+            p { 
+                font-family: $font01;
+                font-size: 12px;
+                @include border(200px,solid,aqua);
+                @include transition(all,3s,linear);
+                &:hover{
+                    color: grey;
+                }
+                &::first-line {
+                    color: rgb(12, 12, 233);
+                    font-style: italic;
+                  }
+            }
+            
+        }
+        .right-block {
+            width: $size01;
+            height: $size02;
+            background-color: $color02;
+            p {
+                font-family: $font02;
+                font-size: 30px;
+            }
+        }
+}
+}
