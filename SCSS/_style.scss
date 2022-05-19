@@ -1,5 +1,17 @@
 .section-bg {
+@extend %container-size;
 background-color: aliceblue;
+    .title {
+        font-size: $size30;
+        margin-bottom: 10px;
+        &::after {
+            content: '';
+            width: 70px;
+            height: 3px;
+            background-color: $color02;
+            display: block;
+        }
+    }
     .wraper {
         @include d-flex(flex,space-between,center);
         .left-block {
@@ -7,16 +19,19 @@ background-color: aliceblue;
             height: $size02;
             background-color: $color01;
             @include d-flex(flex,space-around,center);
-            p { 
+            p { width: 100%;
+                height: $size02;
                 font-family: $font01;
-                font-size: 12px;
-                @include border(200px,solid,aqua);
+                font-size: $size30;
+                text-align: center;
+                @include border(2px,solid,black);
                 @include transition(all,3s,linear);
+                overflow:auto;
                 &:hover{
                     color: grey;
                 }
                 &::first-line {
-                    color: rgb(12, 12, 233);
+                    color: rgb(13, 99, 49);
                     font-style: italic;
                   }
             }
@@ -28,8 +43,32 @@ background-color: aliceblue;
             background-color: $color02;
             p {
                 font-family: $font02;
-                font-size: 30px;
+                font-size: $size30;
             }
         }
 }
+}
+.box {
+    background-color: azure;
+    @media (max-width: 760px){
+        background-color: aqua; 
+    }
+    @include d-flex(flex, space-around, flex-start);
+    .small-box {
+        width: 100px;
+        height: $size30;
+        &:nth-child(1) {
+            background-color: blueviolet;
+        }
+        &:nth-child(2) {
+            background-color: rgb(226, 43, 128);
+        }
+        &:nth-child(3) {
+            background-color: rgb(64, 228, 75);
+        }
+        &:nth-child(4) {
+            background-color: rgb(234, 153, 72);
+        }
+
+    }
 }
