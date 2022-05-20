@@ -1,0 +1,24 @@
+@media (max-width: $brpoint2){
+.box {
+    background-color: aqua; 
+    margin-top: 20px;
+}
+.section-bg {
+    .wraper {
+        .left-block, .right-block{
+            position: relative;
+            height: $size3;
+            p { position: absolute;
+                top: 30%;
+                height: $size3;
+                font-size: $size16;
+                text-align:center;
+                border: 0ch; 
+            }
+        }
+        .left-block {
+            @include border(2px,solid,black);
+        }
+    }
+}
+}

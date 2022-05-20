@@ -14,3 +14,8 @@
 @mixin transition($property,$duration,$type) {
     transition: $property, $duration, $type;
 }
+
+@mixin max-size ($maxwidth, $width){
+    max-width: $maxwidth;
+    width: $width;
+}
