@@ -13,7 +13,12 @@ background-color: aliceblue;
         }
     }
     .wraper {
+        @include max-size($brpoint2,100%);
         @include d-flex(flex,space-between,center);
+        @media (max-width:$brpoint2) {
+            flex-direction: column;
+        }
+        margin: 0 auto;
         .left-block {
             width: $size01;
             height: $size02;
@@ -50,9 +55,7 @@ background-color: aliceblue;
 }
 .box {
     background-color: azure;
-    @media (max-width: 760px){
-        background-color: aqua; 
-    }
+    margin-top: 10px;
     @include d-flex(flex, space-around, flex-start);
     .small-box {
         width: 100px;
